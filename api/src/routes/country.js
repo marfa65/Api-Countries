@@ -1,66 +1,47 @@
 const { Router } = require("express");
-const axios = require("axios");
 const router = Router();
-require("dotenv").config();
-const { Country, Activity } = require("../db.js");
-const { getDbAll, getApiInfo } = require("./utils.js");
+const { getDbAll, getApiInfo, getByName, getById } = require("./utils.js");
 
+// WARNING !! this path was created only to load the local DB in the first instance.
+// ADVERTENCIA !! esta ruta fue creada solo para cargar la base de datos local en la primera instancia.
 router.get("/api", async (req, res) => {
   try {
     const countriesApi = await getApiInfo();
-    // console.log("paises:", countriesAll);
+
     res.status(200).send(countriesApi);
   } catch (error) {
     console.log(error);
+    res.send(error);
   }
 });
 
 router.get("/", async (req, res) => {
+  const { name } = req.query;
   try {
-    const countriesAll = await getDbAll();
-
-    res.status(200).send(countriesAll);
+    if (name) {
+      let countryName = await getByName(name);
+      countryName.length
+        ? res.status(200).send(countryName)
+        : res.status(404).send("no se encontraron países con ese nombre");
+    } else {
+      const countriesAll = await getDbAll();
+      res.status(200).send(countriesAll);
+    }
   } catch (error) {
     console.log(error);
+    res.send(error);
   }
 });
 
-router.get("/country/name", async (req, res) => {
-  const { name } = req.query;
+router.get("/:id", async (req, res) => {
+  const { id } = req.params;
   try {
-    let countryName = await Country.findAll({
-      where: {
-        name: {
-          [Op.iLike]: `%${name}%`,
-        },
-      },
-    });
-
-    res.status(200).send(countryName);
+    const countryId = await getById(id);
+    res.status(200).send(countryId);
   } catch (error) {
     console.log(error);
+    res.send(error);
   }
 });
 
 module.exports = router;
-
-// router.get("/", async (req, res) => {
-//   const { name } = req.query;
-//   try {
-//     const countriesAll = await getDbAll();
-//     // console.log("countriesAll:", countriesAll);
-//     if (name) {
-//       // si me pasan un nombre obtengo el o los paises con ese nombre
-//       let countryName = await countriesAll.filter((e) =>
-//         e.name.toLowerCase().includes(name.toLowerCase())
-//       );
-//       countryName.length
-//         ? res.status(200).send(countryName)
-//         : res.status(404).send("no se encontraron países con ese nombre");
-//     } else {
-//       res.status(200).send(countriesAll);
-//     }
-//   } catch (error) {
-//     console.log(error);
-//   }
-// });
