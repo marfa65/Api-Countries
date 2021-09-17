@@ -1,6 +1,12 @@
 const { Router } = require("express");
 const router = Router();
-const { getDbAll, getApiInfo, getByName, getById } = require("./utils.js");
+const {
+  getDbAll,
+  getApiInfo,
+  getByName,
+  getById,
+  getOrderAlphabet,
+} = require("./utils.js");
 
 // WARNING !! this path was created only to load the local DB in the first instance.
 // ADVERTENCIA !! esta ruta fue creada solo para cargar la base de datos local en la primera instancia.
@@ -16,21 +22,59 @@ router.get("/api", async (req, res) => {
 });
 
 router.get("/", async (req, res) => {
-  const { name } = req.query;
+  console.log("nombre");
   try {
+    const { name, page } = req.query;
     if (name) {
       let countryName = await getByName(name);
       countryName.length
         ? res.status(200).send(countryName)
         : res.status(404).send("no se encontraron países con ese nombre");
     } else {
-      const countriesAll = await getDbAll();
+      const countriesAll = await getDbAll(page);
       res.status(200).send(countriesAll);
+      // res.send({
+      //  countriesAll
+      // });
     }
   } catch (error) {
     console.log(error);
     res.send(error);
   }
+});
+// router.get("/", async (req, res) => {
+//   const { name } = req.query;
+//   try {
+//     if (name) {
+//       let countryName = await getByName(name);
+//       countryName.length
+//         ? res.status(200).send(countryName)
+//         : res.status(404).send("no se encontraron países con ese nombre");
+//     } else {
+//       const countriesAll = await getDbAll();
+//       res.status(200).send(countriesAll);
+//     }
+//   } catch (error) {
+//     console.log(error);
+//     res.send(error);
+//   }
+// });
+
+router.get("/order", async (req, res) => {
+  const { by, asc } = req.query;
+  try {
+    const countriesOrder = await getOrderAlphabet(by, asc);
+    res.status(200).send(countriesOrder);
+
+    // if (desc) {
+    //   const countriesDesc = await getOrderAlphabet(desc);
+    //   res.status(200).send(countriesDesc);
+    // }
+    // res.send("ok");
+  } catch (error) {
+    res.send(error);
+  }
+  // res.send("ok");
 });
 
 router.get("/:id", async (req, res) => {
@@ -43,5 +87,6 @@ router.get("/:id", async (req, res) => {
     res.send(error);
   }
 });
+
 
 module.exports = router;
