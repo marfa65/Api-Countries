@@ -1,10 +1,10 @@
 @font-face{
     font-family: 'Maler';
     /* src: url(../../fonts/brankovic.ttf); */
-    src: url(../../fonts/Hand_Of_Sean_Demo.ttf);
+    src: url(../fonts/Hand_Of_Sean_Demo.ttf);
 }
   .landing{
-      background-image: url(../../images/wallpaperflare.com_wallpaper\ \(1\).jpg);
+      background-image: url(../images/mapa.jpg);
       max-width: 100%;
       background-position: center center;
       background-size: cover;

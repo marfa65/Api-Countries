@@ -1,0 +1,32 @@
+/* de la tarea del clima
+
+.cont{
+    background-color: rgba(68, 67, 67, 0.541);
+    height: 50px;
+   padding: 10px;
+   display: flex;
+   justify-content: flex-end;
+   margin-top: 20px;
+   
+}
+.cont input{
+   width: 300px;
+   border-radius: 5px;
+   
+
+}
+.cont button{
+    border-radius: 5px;
+    background-color: rgba(41, 40, 43, 0.335);
+    color:white;
+    margin-right: 20px;
+    font-weight: 600;
+    border-block-end-width: 3px;
+    margin-left: 5px;
+       
+}
+.cont button:hover{
+    color: white;
+    background-color:rgb(43, 42, 42); */
+/* } */
+/* background-color: rgba(51, 3, 128, 0); transparente*/
