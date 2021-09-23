@@ -5,7 +5,7 @@ const {
   getApiInfo,
   getByName,
   getById,
-  getOrderAlphabet,
+  // getOrderAlphabet,
 } = require("./utils.js");
 
 // WARNING !! this path was created only to load the local DB in the first instance.
@@ -22,16 +22,16 @@ router.get("/api", async (req, res) => {
 });
 
 router.get("/", async (req, res) => {
-  console.log("nombre");
+  // console.log("nombre");
   try {
-    const { name, page } = req.query;
+    const { name } = req.query;
     if (name) {
       let countryName = await getByName(name);
       countryName.length
         ? res.status(200).send(countryName)
         : res.status(404).send("no se encontraron países con ese nombre");
     } else {
-      const countriesAll = await getDbAll(page);
+      const countriesAll = await getDbAll();
       res.status(200).send(countriesAll);
       // res.send({
       //  countriesAll
@@ -60,22 +60,22 @@ router.get("/", async (req, res) => {
 //   }
 // });
 
-router.get("/order", async (req, res) => {
-  const { by, asc } = req.query;
-  try {
-    const countriesOrder = await getOrderAlphabet(by, asc);
-    res.status(200).send(countriesOrder);
+// router.get("/order", async (req, res) => {
+//   const { by, asc } = req.query;
+//   try {
+//     const countriesOrder = await getOrderAlphabet(by, asc);
+//     res.status(200).send(countriesOrder);
 
-    // if (desc) {
-    //   const countriesDesc = await getOrderAlphabet(desc);
-    //   res.status(200).send(countriesDesc);
-    // }
-    // res.send("ok");
-  } catch (error) {
-    res.send(error);
-  }
-  // res.send("ok");
-});
+//     // if (desc) {
+//     //   const countriesDesc = await getOrderAlphabet(desc);
+//     //   res.status(200).send(countriesDesc);
+//     // }
+//     // res.send("ok");
+//   } catch (error) {
+//     res.send(error);
+//   }
+//   // res.send("ok");
+// });
 
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
@@ -87,6 +87,5 @@ router.get("/:id", async (req, res) => {
     res.send(error);
   }
 });
-
 
 module.exports = router;
