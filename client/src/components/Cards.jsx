@@ -11,7 +11,7 @@ import Card from './Card';
 export default function Cards(){
     const actual = useSelector((state) => state.page);
     const allCountries = useSelector((state) => state.countries);
-    console.log('sssssssssssssssss',allCountries)
+    // console.log('sssssssssssssssss',allCountries)
     let size = 10;
     let countries = allCountries;
     if (actual === 1) {
@@ -28,15 +28,15 @@ export default function Cards(){
           size * (actual - 1) + size - 1
         );
       }
-      console.log('paged', countries);
+      // console.log('paged', countries);
 
     return (
         <div>
             {
                 countries?.map(el => {
                     return (  
-                    <div className={style.cards}>                        
-                        <Card key={el.id} id={el.id} flag={el.flag} name={el.name} continent={el.continent} />                       
+                    <div key={el.id} className={style.cards}>                        
+                        <Card  id={el.id} flag={el.flag} name={el.name} continent={el.continent} />                       
                     </div>    
                 )})
             }

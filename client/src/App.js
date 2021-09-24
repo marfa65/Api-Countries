@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import LandingPage from "./components/LandingPage.jsx";
 import Home from "./components/Home.jsx";
 import Detail from "./components/Detail.jsx";
+import ActivityCreate from "./components/ActivityCreate";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={LandingPage} />
         <Route path="/home" component={Home} />
+        <Route path="/activityCreate" component={ActivityCreate} />
         <Route
           path="/detail/:id"
           render={({ match }) => <Detail id={match.params.id} />}

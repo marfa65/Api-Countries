@@ -1,9 +1,11 @@
 import React from "react";
 import {useState} from "react";
 import {useDispatch} from "react-redux";
+import {Link} from "react-router-dom";
 import style from '../styleComponents/NavBar.module.css';
 import getCountries from '../actions/getCountries';
 import getByName from '../actions/getByName';
+import paged from '../actions/paged';
 
 
 export default function NavBar(){
@@ -20,6 +22,7 @@ export default function NavBar(){
     }
     function handleName() {
         dispatch(getByName(input));
+        dispatch(paged(1));
         setInput("");
     }
 
@@ -27,11 +30,15 @@ export default function NavBar(){
         <div className={style.container}>
             <h1 className={style.title}>World tour</h1>
             <button className={style.btn} onClick={e => {handleClick(e)}}>
-                Refresh
+            Reload
             </button>
             <input type="text" placeholder="search country" onChange={handleInput} value={input}/>
             <button className={style.btn2} onClick={() => {handleName()}}> Search</button>
+            <div>
+            <Link to='/activityCreate'>Create Activity</Link>
+            </div>
         </div>
+        
     )
 };
 
