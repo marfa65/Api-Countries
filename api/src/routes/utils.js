@@ -6,7 +6,8 @@ const { Country, Activity, Op } = require("../db");
 //initial DB load---carga inicial de BD
 const getApiInfo = async function () {
   try {
-    const apiUrl = (await axios("https://restcountries.eu/rest/v2/all")).data;
+    const apiUrl = (await axios("https://restcountries.com/v2/all")).data;
+    // const apiUrl = (await axios("https://restcountries.eu/rest/v2/all")).data;
     // https://restcountries.com/v2/all direccion nueva
 
     for (let i = 0; i < apiUrl.length; i++) {
@@ -15,10 +16,13 @@ const getApiInfo = async function () {
         where: {
           id: c.alpha3Code,
           name: c.name,
-          flag: c.flag,
-          continent: c.region,
+          flag: c.flags[1],
+          // flag: c.flag, //flags []
+          continent: c.continent,
+          // continent: c.region,// continent
           capital: c.capital,
-          subregion: c.subregion,
+          subregion: c.region,
+          // subregion: c.subregion, // region
           area: c.area,
           population: c.population,
         },
@@ -135,8 +139,15 @@ const getByName = async function (name) {
         },
       },
       attributes: ["name", "id", "flag", "continent"],
-      through: {
-        attributes: [],
+      // through: {
+      //   attributes: [],
+      // },
+      include: {
+        model: Activity,
+        attributes: ["id", "name"],
+        through: {
+          attributes: [],
+        },
       },
     });
     return countryName;
