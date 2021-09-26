@@ -3,7 +3,8 @@ const router = Router();
 const { postActivity } = require("./utils.js");
 
 router.post("/", async (req, res) => {
-  const { name, difficulty, duration, season, country } = req.body;
+  const { name, difficulty, duration, season, countries } = req.body;
+
   name
     ? name.toLowerCase()
     : res.status(404).json({ msg: "debe colocar un nombre a la actividad" });
@@ -13,7 +14,7 @@ router.post("/", async (req, res) => {
       difficulty,
       duration,
       season,
-      country
+      countries
     );
 
     res.json(activityCreated);
