@@ -3,29 +3,47 @@ import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 
 import getCountries from '../actions/getCountries';
-import getActivities from '../actions/getActivities';
+// import getActivities from '../actions/getActivities';
 import orderContinent from '../actions/orderContinent';
 import paged from '../actions/paged';
 
 import OrderByName from './OrderByName';
 import OrderByPop from './OrderByPop';
+import OrderByActivity from './OrderByActivity';
 
 
 export default function Menu(){
     const dispatch = useDispatch();
     const allCountries = useSelector((state) => state.countries);
-    const allActivities = useSelector((state) => state.activities);
+    // const allActivities = useSelector((state) => state.activities);
+    // console.log('allCountries',allCountries);
+    // console.log('allActivities',allActivities);
+
+    // const act = allCountries.map((e) => (e = e.activities));
+    // // console.log('ACT', act)
+    // let activity = act.filter((e) => e.length > 0);
+    // // console.log('ACTIVITY', activity)
+
+    // activity = new Set(act.flat().map((e) => (e = e.name)));
+    // let result = [...activity];
+    // // const countriesWithActivities = 
+    // console.log('result',result);
+    // console.log('countriesWithActivities',countriesWithActivities)
+
+
+
+    // getActivities()
+    // // const allActivities = useSelector((state) => state.activities);
     useEffect(() => {
         dispatch(getCountries());
         // console.log('useEffect Nro 1')
     },[dispatch]);
     
-    useEffect(() => {
+    // useEffect(() => {
         
-        dispatch(getActivities());
+    //     dispatch(getActivities());
         
-    },[dispatch]);
-
+    // },[dispatch]);
 
 
     function handleOnChangeContinent(e){ // para recetear y que cargue todo de nuevo
@@ -62,6 +80,7 @@ export default function Menu(){
             </select>
             <OrderByName />
             <OrderByPop />
+            <OrderByActivity />
         {/* <select>                                        
             <option value= 'asc'>Ascendente</option>
             <option value= 'desc'>Descendente</option> 
@@ -69,14 +88,14 @@ export default function Menu(){
         {/* <select>
             <option value= 'pop'>Population</option>
         </select> */}
-        <select>
+        {/* <select>
         {
             
-            allActivities.map(el => {
+            result.map(el => {
                 return(el = <option value= {el} key = {el}>{el}</option>)})                           
                 
         }
-        </select>
+        </select> */}
         
         {
             // allCountries?.map(el => {

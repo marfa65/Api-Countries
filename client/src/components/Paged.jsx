@@ -19,7 +19,7 @@ export default function Page() {
 
     const totalPages = Math.trunc(allCountries.length / size) + 1;
     // Math.trunc devuelve el numero sin decimales
-    console.log('totalPages', totalPages)
+    // console.log('totalPages', totalPages)
 
     function handlePage(e) {
        

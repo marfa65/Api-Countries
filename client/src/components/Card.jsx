@@ -1,29 +1,64 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 // import style from '../styleComponents/Card.module.css'
 
-export default function Card({name, flag, continent, id}){
+export default function Card({name, flag, continent, id, population}){
     // console.log('card', name, flag, continent, id)
+    const allCountries = useSelector((state) => state.countries);
+    // console.log('allCountries', allCountries[allCountries.length-1].name)
 
-    return (
-        // <div className={style.cont}>
-        //     <div className={style.card}>
-        <div>
+    if(allCountries[0].name === 'India' || allCountries[allCountries.length-1].name === 'India'
+    || allCountries[0].name === 'China' || allCountries[allCountries.length-1].name === 'China'){
+
+        return (
+            // <div className={style.cont}>
+            //     <div className={style.card}>
             <div>
-                <img src={flag} alt="Flag"/>
+                <div>
+                    <img src={flag} alt="Flag"/>
+                </div>
+                <div>
+                    <p>Country: </p>
+                    <Link to={`/detail/${id}`}>
+                    <h3>{name}</h3>
+                    </Link>
+                </div>
+                <div>
+                    <p>Continent: </p>
+                    <h4>{continent}</h4>
+                </div>
+
+                <div>
+                    <p>Population: </p>
+                    <h4>{population}</h4>
+                </div>
+
             </div>
+        )
+    } else {
+
+        return (
+            
             <div>
-                <p>Country: </p>
-                <Link to={`/detail/${id}`}>
-                <h3>{name}</h3>
-                </Link>
+                <div>
+                    <img src={flag} alt="Flag"/>
+                </div>
+                <div>
+                    <p>Country: </p>
+                    <Link to={`/detail/${id}`}>
+                    <h3>{name}</h3>
+                    </Link>
+                </div>
+                <div>
+                    <p>Continent: </p>
+                    <h4>{continent}</h4>
+                </div>
             </div>
-            <div>
-                <p>Continent: </p>
-                <h4>{continent}</h4>
-            </div>
-        </div>
-    )
+        )
+    }
+
+  
 }
 
 // return(

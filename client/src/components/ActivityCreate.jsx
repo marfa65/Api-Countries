@@ -18,6 +18,7 @@ export default function ActivityCreate(){
     })
 
     const onSubmit = (e) =>{
+        console.log('VALUES', values)
         e.preventDefault()
         dispatch(postActivity(values))
         setValues({

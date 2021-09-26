@@ -17,7 +17,7 @@ export default function Detail({id}){
         
     const countrieDetail = useSelector((state) => state.detail);
     const {name, flag, continent, capital, subregion, area, population, activities} = countrieDetail
-
+    
 
     return (
         // <div className={style.cont}>
@@ -27,7 +27,8 @@ export default function Detail({id}){
             <div>
                 <img src={flag} alt="Flag"/>
                 <p>Country: </p>              
-                <h3>{name}</h3>              
+                <h3>{name}</h3>
+                <p>Code:</p>              
                 <h4>{id}</h4>
                 <p>Continent: </p>
                 <h4>{continent}</h4>
@@ -36,9 +37,9 @@ export default function Detail({id}){
                 <p>Subregion: </p>
                 <h4>{subregion}</h4>
                 <p>Area: </p>
-                <h4>{area}</h4>
+                <h4>{area} Km²</h4>
                 <p>Population: </p>
-                <h4>{population}</h4>
+                <h4>{population} pop</h4>
                 <div>
 
                 <div>
@@ -47,13 +48,13 @@ export default function Detail({id}){
                     return (  
                     <div key={el.id}>
                         
-                        <p>Activity</p>
+                        <p>Activity:</p>
                         <h4>{el.name}</h4>                       
-                        <p>Difficulty</p>
+                        <p>Difficulty:</p>
                         <h4>{el.difficulty}</h4>                       
-                        <p>Duration</p>
+                        <p>Duration:</p>
                         <h4>{el.duration}</h4>                       
-                        <p>Season</p>
+                        <p>Season:</p>
                         <h4>{el.season}</h4>                       
                         
                     </div>    

@@ -36,7 +36,7 @@ export default function Cards(){
                 countries?.map(el => {
                     return (  
                     <div key={el.id} className={style.cards}>                        
-                        <Card  id={el.id} flag={el.flag} name={el.name} continent={el.continent} />                       
+                        <Card  id={el.id} flag={el.flag} name={el.name} continent={el.continent} population={el.population} />                       
                     </div>    
                 )})
             }

@@ -7,6 +7,7 @@ import {
   ORDER_CONTINENT,
   ORDER_POPULATION,
   ORDER_BY_NAME,
+  ORDER_ACTIVITY,
 } from "../actions/index.js";
 
 const initialState = {
@@ -23,36 +24,49 @@ export default function rootReducer(state = initialState, action) {
         ...state,
         countries: action.payload,
       };
+
     case GET_BY_NAME:
       return {
         ...state,
         countries: action.payload,
       };
+
     case ORDER_CONTINENT:
       return {
         ...state,
         countries: action.payload,
       };
+
     case ORDER_POPULATION:
       return {
         ...state,
         countries: action.payload,
       };
+
+    case ORDER_ACTIVITY:
+      return {
+        ...state,
+        countries: action.payload,
+      };
+
     case ORDER_BY_NAME:
       return {
         ...state,
         countries: action.payload,
       };
+
     case GET_BY_ID:
       return {
         ...state,
         detail: action.payload,
       };
+
     case GET_ACTIVITIES:
       return {
         ...state,
         activities: action.payload,
       };
+
     case ACTUAL_PAGE:
       return {
         ...state,
