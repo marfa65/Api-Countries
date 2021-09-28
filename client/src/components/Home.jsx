@@ -14,16 +14,6 @@ import getActivities from '../actions/getActivities';
 export default function Home (){
     
     const dispatch = useDispatch();
-    // const allCountries = useSelector((state) => state.countries);
-
-    // const act = allCountries.map((e) => (e = e.activities));
-    // // console.log('ACT', act)
-    // let activity = act.filter((e) => e.length > 0);
-    // // console.log('ACTIVITY', activity)
-
-    // activity = new Set(act.flat().map((e) => (e = e.name)));
-    // let result = [...activity];
-    // getActivities(result);
 
     useEffect(() => {
         dispatch(getCountries());
@@ -34,18 +24,17 @@ export default function Home (){
     },[dispatch]);
 
     return (
-        <div>
-            <div className={style.navBar}>
+        <div className={style.home}>
+            <div>
                 <NavBar />
             </div>
-            <div className={style.menu}>
+            <div>
                 <Menu /> 
-               
             </div>
-            <div className={style.cards}>
+            <div>
                 <Cards /> 
             </div>
-            <div className={style.paged}>
+            <div>
                 <Paged />                
             </div>            
         </div>

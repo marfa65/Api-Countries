@@ -1,0 +1,19 @@
+.cont{
+    background-color: rgba(19, 94, 233, 0.822);
+    height: 40px;
+   padding: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 10px;
+   
+}
+
+.cont div{
+    margin-left: 5px;
+
+}
+select{
+    color: rgb(173, 247, 243)
+    
+}

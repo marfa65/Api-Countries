@@ -16,6 +16,7 @@ export default function NavBar(){
     function handleClick(e){ // para recetear y que cargue todo de nuevo
         e.preventDefault();
         dispatch(getCountries());
+        dispatch(paged(1));
     }
     function handleInput(e){         
         setInput(e.target.value);
@@ -27,16 +28,24 @@ export default function NavBar(){
     }
 
     return (
-        <div className={style.container}>
+        <div className={style.cont}>
             <h1 className={style.title}>World tour</h1>
             <button className={style.btn} onClick={e => {handleClick(e)}}>
             Reload
             </button>
-            <input type="text" placeholder="search country" onChange={handleInput} value={input}/>
-            <button className={style.btn2} onClick={() => {handleName()}}> Search</button>
+
             <div>
-            <Link to='/activityCreate'>Create Activity</Link>
+                <input className={style.input} type="text" placeholder="search country" onChange={handleInput} value={input}/>
+                <button className={style.btn2} onClick={() => {handleName()}}> Search</button>
             </div>
+            
+            <div className={style.link}>
+                <Link to='/activityCreate'>Create Activity</Link>
+            </div>
+            
+            
+            
+            
         </div>
         
     )

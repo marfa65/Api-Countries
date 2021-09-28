@@ -1,0 +1,8 @@
+.home {
+    background-image: url(../images/mapa2.jpg);
+    /* background-image: url(../images/wallpaperflare.com_wallpaper.jpg); */
+    max-width: 100%;
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+}

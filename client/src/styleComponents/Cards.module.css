@@ -1,15 +1,18 @@
-/* esto es de la tarea del clima
+
 
 .cnt{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 100px;
+
+     margin-top: 10px;
+    display: grid;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 0.7fr 0.7fr 0.7fr;  
+    gap: 20px 30px; 
+    grid-template-areas: 
+      ". . ."
+      ". . ."
+      ". . ."; 
+    
 }
-@media(max-width: 768px){
-    .cnt{
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 20px;
-        
-    }
-} */
+
+

@@ -1,11 +1,7 @@
-
-
 import React from "react";
 import {useDispatch, useSelector} from "react-redux";
-
-
+import style from '../styleComponents/Selector.module.css'
 import orderByName from '../actions/orderByName';
-
 
 export default function OrderByName() {
     const allCountries = useSelector((state) => state.countries);
@@ -13,8 +9,7 @@ export default function OrderByName() {
     const dispatch = useDispatch();
 
     function onChangeName(e) {
-        // let asc = allCountries.sort((a, b) => (a.name > b.name) ? 1 : -1);
-        // let desc = allCountries.sort((a, b) => (a.name > b.name) ? -1 : 1);
+
         let asc = [...allCountries]
         let desc = [...allCountries]
         asc.sort((a, b) => (a.name > b.name) ? 1 : -1);
@@ -35,8 +30,8 @@ export default function OrderByName() {
 
     return (
         <div>
-        <select name='order' onChange={onChangeName}>   
-            <option value='order'>oreder alph</option>                                    
+        <select className={style.select} name='order' onChange={onChangeName}>   
+            <option value='order'>order alph</option>                                    
             <option value="asc">Ascending </option>
             <option value="desc">Descending </option> 
         </select> 

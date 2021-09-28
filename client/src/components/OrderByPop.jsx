@@ -1,6 +1,6 @@
 import React from "react";
 import {useDispatch, useSelector} from "react-redux";
-
+import style from '../styleComponents/Selector.module.css'
 import orderPopulation from '../actions/orderPopulation';
 
 export default function OrderByPop() {
@@ -9,8 +9,7 @@ export default function OrderByPop() {
     const dispatch = useDispatch();
 
     function onChangeName(e) {
-        // let asc = allCountries.sort((a, b) => (a.name > b.name) ? 1 : -1);
-        // let desc = allCountries.sort((a, b) => (a.name > b.name) ? -1 : 1);
+
         let asc = [...allCountries]
         let desc = [...allCountries]
         asc.sort((a, b) => (a.population > b.population) ? 1 : -1);
@@ -31,8 +30,8 @@ export default function OrderByPop() {
 
     return (
         <div>
-        <select name='orderPopulation' onChange={onChangeName}>   
-            <option value='order'>oreder Population</option>                                    
+        <select className={style.select} name='orderPopulation' onChange={onChangeName}>   
+            <option value='order'>order Population</option>                                    
             <option value="asc">Ascending </option>
             <option value="desc">Descending </option> 
         </select> 

@@ -1,32 +1,70 @@
-/* de la tarea del clima
+
 
 .cont{
-    background-color: rgba(68, 67, 67, 0.541);
-    height: 50px;
+    background-color: rgba(19, 94, 233, 0.822);
+    height: 40px;
    padding: 10px;
    display: flex;
-   justify-content: flex-end;
-   margin-top: 20px;
+   justify-content: space-around;
+   align-items: center;
+   margin-top: 5px;
    
 }
-.cont input{
-   width: 300px;
+.title{
+    color: rgb(173, 247, 243);
+}
+.input{
+   width: 400px;
+   height: 25px;
    border-radius: 5px;
    
 
 }
-.cont button{
+.btn{
     border-radius: 5px;
-    background-color: rgba(41, 40, 43, 0.335);
-    color:white;
-    margin-right: 20px;
-    font-weight: 600;
+    background-color: rgb(173, 247, 243);
+    /* background-color: rgba(41, 40, 43, 0.335); */
+    color:rgb(20, 12, 134);
+    width: 100px;
+    height: 30px;
+    /* margin-right: 20px; */
+    font-weight: 900;
     border-block-end-width: 3px;
-    margin-left: 5px;
+    /* margin-left: 50px; */
        
 }
-.cont button:hover{
+.btn:hover{
     color: white;
-    background-color:rgb(43, 42, 42); */
-/* } */
-/* background-color: rgba(51, 3, 128, 0); transparente*/
+    background-color:rgb(43, 42, 42); 
+
+
+ } 
+/* background-color: rgba(51, 3, 128, 0); transparente */
+.btn2{
+    border-radius: 5px;
+    background-color: rgb(173, 247, 243);
+    color:rgb(20, 12, 134);
+    width: 100px;
+    height: 30px;
+    /* margin-right: 20px; */
+    font-weight: 900;
+    border-block-end-width: 3px;
+}
+.btn2:hover{
+    color: white;
+    background-color:rgb(43, 42, 42); 
+
+
+ } 
+
+ 
+.link{
+    
+font-size: 25px;
+/* color: rgb(5, 12, 12); 
+text-decoration: none;  */
+    
+} 
+.input {
+    background-color:black;
+}
