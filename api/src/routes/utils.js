@@ -242,6 +242,15 @@ const getById = async function (id) {
 
 // *******     ACTIVITY     *******
 
+const getActivity = async function () {
+  try {
+    const activityDb = await Activity.findAll();
+    return activityDb;
+  } catch (error) {
+    return error;
+  }
+};
+
 const postActivity = async function (
   name,
   difficulty,
@@ -277,5 +286,6 @@ module.exports = {
   getByName,
   getById,
   postActivity,
+  getActivity,
   // getOrderAlphabet,
 };

@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const router = Router();
-const { postActivity } = require("./utils.js");
+const { postActivity, getActivity } = require("./utils.js");
 
 router.post("/", async (req, res) => {
   const { name, difficulty, duration, season, countries } = req.body;
@@ -20,6 +20,15 @@ router.post("/", async (req, res) => {
     res.json(activityCreated);
   } catch (error) {
     console.log(error);
+    res.send(error);
+  }
+});
+
+router.get("/", async (req, res) => {
+  try {
+    const allActivity = await getActivity();
+    res.json(allActivity);
+  } catch (error) {
     res.send(error);
   }
 });
