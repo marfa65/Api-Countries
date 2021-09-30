@@ -1,11 +1,7 @@
 import React from "react";
-
 import { useSelector } from "react-redux";
-
 import style from '../styleComponents/Cards.module.css';
-
 import Card from './Card';
-
 
 export default function Cards(){
     const actual = useSelector((state) => state.page);
@@ -27,9 +23,10 @@ export default function Cards(){
           size * (actual - 1) + size - 1
         );
       }
-
+      
     return (
         <div className={style.cnt}>
+          
             {
                 countries?.map(el => {
                     return (  

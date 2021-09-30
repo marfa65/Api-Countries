@@ -9,7 +9,7 @@ import paged from '../actions/paged';
 
 
 export default function NavBar(){
-
+    
     const [input, setInput] = useState("");
     const dispatch = useDispatch();
 
@@ -18,9 +18,11 @@ export default function NavBar(){
         dispatch(getCountries());
         dispatch(paged(1));
     }
+
     function handleInput(e){         
         setInput(e.target.value);
     }
+    
     function handleName() {
         dispatch(getByName(input));
         dispatch(paged(1));
@@ -42,10 +44,7 @@ export default function NavBar(){
             <div className={style.link}>
                 <Link to='/activityCreate'>Create Activity</Link>
             </div>
-            
-            
-            
-            
+
         </div>
         
     )

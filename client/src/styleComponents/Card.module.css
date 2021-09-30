@@ -5,19 +5,28 @@
     height: 150px;
 } */
 .card {
-    background-color:rgba(24, 70, 156, 0.493);
+    border: 1px solid blue;
+    border-radius: 5px;
+    background-color:rgba(0, 69, 230, 0.116);
     display: flex;
     flex-direction:column;
     justify-content: center;
     align-items: center;
 }
+.card:hover{
+   
+    box-shadow: 3px 3px 5px #999;
+    
+}
 
 .flag {
+    border: 1px solid dimgray;
     width: 200px;
     height: 100px;
 }
 
 .detail {
+    font-family: cursive;
     width: 350px;
     display: flex;
     justify-content:center;

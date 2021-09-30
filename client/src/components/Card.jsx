@@ -17,6 +17,7 @@ export default function Card({name, flag, continent, id, population}){
             <div className={style.card}>
                 <div>
                     <img className={style.flag} src={flag} alt="Flag"/>
+                    {/* spinner */}
                 </div>
                 <div className={style.detail}>
                     <p>Country: </p>

@@ -13,7 +13,7 @@ export default function OrderByActivity(){
    function onSelectActivity(e){
         dispatch(paged(1));
        let countryActivity = allCountries.filter(c => c.activities.length > 0);  
-       let paisConActiv = [];
+       let countActiv = [];
        
        for(let i = 0; i < countryActivity.length; i++){
         
@@ -21,10 +21,10 @@ export default function OrderByActivity(){
         
         pais.activities.forEach(el => {
             if(el.name === e.target.value){
-                paisConActiv.push(pais)
+                countActiv.push(pais)
             }
         })
-        dispatch(orderActivity(paisConActiv))
+        dispatch(orderActivity(countActiv))
 
         
     }}

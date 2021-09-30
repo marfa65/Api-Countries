@@ -9,8 +9,7 @@ export default function OrderContinent(){
     const dispatch = useDispatch();
     const allCountries = useSelector((state) => state.countries);
 
-
-    function handleOnChangeContinent(e){ // para recetear y que cargue todo de nuevo
+    function handleOnChangeContinent(e){ 
 
         let continents = allCountries.filter(c => c.continent === e.target.value)
         dispatch(orderContinent(continents));
@@ -31,17 +30,5 @@ export default function OrderContinent(){
             </select>
         </div>
 
-     
-        // <div>
-        //     <select name="continent" onChange={handleOnChangeContinent}>
-        //         <option>Continent</option>
-        //         <option value="Africa">Africa</option>
-        //         <option value="Americas">Americas</option>
-        //         <option value="Asia">Asia</option>
-        //         <option value="Europe">Europe</option>
-        //         <option value="Oceania">Oceania</option>
-
-        //     </select>
-        // </div>
     )
-}
+};
