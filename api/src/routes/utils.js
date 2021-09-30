@@ -6,12 +6,12 @@ const { Country, Activity, Op } = require("../db");
 //initial DB load---carga inicial de BD
 const getApiInfo = async function () {
   try {
-    const apiUrl = (await axios("https://restcountries.com/v2/all")).data;
+    const apiInfo = (await axios("https://restcountries.com/v2/all")).data;
     // const apiUrl = (await axios("https://restcountries.eu/rest/v2/all")).data;
     // https://restcountries.com/v2/all direccion nueva
 
-    for (let i = 0; i < apiUrl.length; i++) {
-      let c = apiUrl[i];
+    for (let i = 0; i < apiInfo.length; i++) {
+      let c = apiInfo[i];
       Country.findOrCreate({
         where: {
           id: c.alpha3Code,
@@ -159,7 +159,6 @@ const getByName = async function (name) {
 
 const getById = async function (id) {
   try {
-    // let countryId = await Country.findByPk(id, { include: Activity });
     let countryId = await Country.findByPk(id, {
       include: {
         model: Activity,
@@ -201,9 +200,9 @@ const getById = async function (id) {
 //       };
 //     });
 //     if (asc === "false") {
-//       infoCountries.sort((a, b) => (a[by] > b[by] ? -1 : 1));
+//       infoCountries.sort((a, b) => (a.name > b.name ? -1 : 1));
 //     } else {
-//       infoCountries.sort((a, b) => (a[by] > b[by] ? 1 : -1));
+//       infoCountries.sort((a, b) => (a.name > b.name ? 1 : -1));
 //     }
 
 //     return infoCountries;

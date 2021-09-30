@@ -7,7 +7,7 @@ router.post("/", async (req, res) => {
 
   name
     ? name.toLowerCase()
-    : res.status(404).json({ msg: "debe colocar un nombre a la actividad" });
+    : res.status(404).json({ msg: "It requires a name" });
   try {
     const activityCreated = await postActivity(
       name,
