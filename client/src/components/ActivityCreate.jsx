@@ -112,8 +112,8 @@ export default function ActivityCreate(){
                 </div>
                         
             </form>
-            <div className={style.link}>
-            <Link to='/home'>Home</Link>
+            <div>
+            <Link className={style.link} to='/home'>Home</Link>
             </div>
             
         </div>

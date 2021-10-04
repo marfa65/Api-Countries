@@ -47,7 +47,7 @@ export default function Card({name, flag, continent, id, population}){
                 </div>
                 <div className={style.detail}>
                     <p>Country: </p>
-                    <Link to={`/detail/${id}`}>
+                    <Link className={style.link} to={`/detail/${id}`}>
                     <h3>{name}</h3>
                     </Link>
                 </div>

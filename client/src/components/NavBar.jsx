@@ -41,8 +41,8 @@ export default function NavBar(){
                 <button className={style.btn2} onClick={() => {handleName()}}> Search</button>
             </div>
             
-            <div className={style.link}>
-                <Link to='/activityCreate'>Create Activity</Link>
+            <div >
+                <Link className={style.link} to='/activityCreate'>Create Activity</Link>
             </div>
 
         </div>

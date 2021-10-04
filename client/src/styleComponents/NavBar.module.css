@@ -17,7 +17,7 @@
    justify-content: space-around;
    align-items: center;
    margin-top: 5px;
-  
+  /* max-width: 100%; */
 }
 .title{
     color: rgb(173, 247, 243);
@@ -25,7 +25,7 @@
 }
 
 .input{
-   width: 400px;
+   width: 350px;
    height: 25px;
    border-radius: 5px;
    
@@ -49,7 +49,7 @@
        
 }
 .btn:hover{
-    color: white;
+    color: rgb(173, 247, 243);
     background: rgb(87,40,119);
 background: radial-gradient(circle, rgba(87,40,119,1) 0%, rgba(0,0,6,1) 100%, rgba(131,252,69,1) 100%);
 
@@ -72,7 +72,7 @@ background: radial-gradient(circle, rgba(87,40,119,1) 0%, rgba(0,0,6,1) 100%, rg
     border-block-end-width: 3px;
 }
 .btn2:hover{
-    color: white;
+    color: rgb(173, 247, 243);
     /* background-color:rgb(43, 42, 42);  */
     background: rgb(87,40,119);
 background: radial-gradient(circle, rgba(87,40,119,1) 0%, rgba(0,0,6,1) 100%, rgba(131,252,69,1) 100%);
@@ -81,12 +81,14 @@ background: radial-gradient(circle, rgba(87,40,119,1) 0%, rgba(0,0,6,1) 100%, rg
 
  
 .link{
-
+    color: rgb(173, 247, 243);
     font-family: 'Maler';
     font-size: 25px;
     font-weight: 900;
     
 } 
 .input {
+    font-family: cursive;
     background-color:black;
+    color: rgb(173, 247, 243);
 }

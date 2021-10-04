@@ -7,27 +7,33 @@
 .card {
     border: 1px solid blue;
     border-radius: 5px;
-    background-color:rgba(0, 69, 230, 0.116);
+    /* background-color:rgba(0, 69, 230, 0.116); */
+    /* background: rgb(19,94,233);
+    background: radial-gradient(circle, rgba(19, 94, 233, 0.26) 44%, rgba(6, 50, 226, 0.253) 100%); */
+    background: rgb(19,94,233);
+    background: radial-gradient(circle, rgba(19,94,233,0.962877030162413) 44%, rgba(6,50,226,0.9360119047619048) 100%);
     display: flex;
     flex-direction:column;
     justify-content: center;
     align-items: center;
+    /* width: 350px; */
 }
 .card:hover{
    
-    box-shadow: 3px 3px 5px #999;
+    /* box-shadow: 4px 6px 10px rgb(59, 59, 59); */
+    box-shadow: 3px 3px 6px rgb(97, 97, 97);
     
 }
 
 .flag {
-    border: 1px solid dimgray;
+    border: 1px solid rgb(61, 61, 61);
     width: 200px;
     height: 100px;
 }
 
 .detail {
     font-family: cursive;
-    width: 350px;
+    /* width: 350px; */
     display: flex;
     justify-content:center;
     align-items:center;
@@ -38,7 +44,9 @@
 .detail p{
     margin-right: 10px;
 }
-
+.link{
+    color: rgb(173, 247, 243);
+}
 /* esto es de la tarea del clima
 
 .card{

@@ -2,10 +2,11 @@ nav {
     display:flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 nav h3{
     margin-left: 20px;
     margin-right: 20px;
-    color: #fff;
+    color: rgb(0, 0, 0);
 }

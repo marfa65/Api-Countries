@@ -1,37 +1,48 @@
+@font-face{
+    font-family: 'Maler';
+    src: url(../fonts/Hand_Of_Sean_Demo.ttf);
+}
+
 .cont {
-    background-image: url(../images/mapa1.jpg);
+    /* background-image: url(../images/mapa1.jpg); */
+    background: rgb(47,232,233);
+    background: radial-gradient(circle, rgba(47,232,233,1) 0%, rgba(138,164,241,1) 67%);
     max-width: 100%;
-      background-position: center center;
-      background-size: cover;
-      min-height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content:center;
     align-items: center;
 }
+
 .card {
     border-style: inset ;
     /* border: 3px solid lightblue; */
     border-radius: 10px;
-    background-color:rgba(24, 70, 156, 0.493);
+    /* background-color:rgba(24, 70, 156, 0.493); */
+    /* background: rgb(87,40,119);
+    background: radial-gradient(circle, rgba(87,40,119,1) 28%, rgba(0,0,6,1) 100%, rgba(131,252,69,1) 100%); */
+    background: rgb(19,94,233);
+    background: radial-gradient(circle, rgba(19,94,233,0.962877030162413) 44%, rgba(6,50,226,0.9360119047619048) 100%);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
     margin-bottom: 30px;
+    
 
 }
-
-
 
 .flag {  
     width: 300px;
     height: 200px;
     padding-right: 30px;
     padding-left: 20px;
+    
 }
-
 
 .line {
     display: flex;
@@ -43,20 +54,28 @@
    
 }
 
+.line h3 {
+    font-family: cursive;
+}
+
+.line h4 {
+    font-family: cursive;
+}
+
 .activities {
-    color: rgb(50, 151, 3);
+    color: rgb(173, 247, 243);
     margin-bottom: 10px;
     border-bottom: 3px solid;
 }
 
-
 .back {
-    border-radius: 10px;
+    /* font-family: cursive;
+    border-radius: 10px; */
+    color: rgb(0, 0, 0);
     /* background-color: rgba(20, 20, 20, 0.753); */
-    background-color:rgba(2, 23, 61, 0.568);
-    width: 100px;
-}
-.back:hover {
-    
-    border-inline-style: solid;
+    /* background-color:rgba(2, 23, 61, 0.568); */
+    /* width: 100px; */
+    font-family: 'Maler';
+    font-weight: 700;
+    font-size: 18px;
 }

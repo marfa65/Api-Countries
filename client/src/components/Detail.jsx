@@ -96,8 +96,8 @@ export default function Detail({id}){
                     {/* </div> */}
                 </div>
             </div>
-                <div className={style.back}>
-                <Link to={`/home`} >
+                <div>
+                <Link  className={style.back} to={`/home`} >
                     <h3>BACK</h3>
                 </Link>
                 </div>
