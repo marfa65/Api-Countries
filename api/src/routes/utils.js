@@ -16,13 +16,13 @@ const getApiInfo = async function () {
         where: {
           id: c.alpha3Code,
           name: c.name,
-          flag: c.flags[1],
-          // flag: c.flag, //flags []
-          continent: c.continent,
-          // continent: c.region,// continent
+          flag: c.flags.png,
+          //flag: c.flag, //flags []
+          // continent: c.continent,
+          continent: c.region, // continent
           capital: c.capital,
-          subregion: c.region,
-          // subregion: c.subregion, // region
+          // subregion: c.region,
+          subregion: c.subregion, // region
           area: c.area,
           population: c.population,
         },

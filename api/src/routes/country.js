@@ -34,7 +34,7 @@ router.get("/", async (req, res) => {
       res.status(200).send(countriesAll);
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.send(error);
   }
 });
