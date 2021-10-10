@@ -79,7 +79,6 @@ export default function ActivityCreate(){
                     <option value="5"> 5 </option> 
                 </select>
                 </div>
-
                 <div className={style.item}>
                 <label htmlFor="">Duration : </label>
                 <input name="duration" value={values.duration} onChange={handleOnChange}/>

@@ -7,14 +7,16 @@
     background: radial-gradient(circle, rgba(94,142,230,1) 32%, rgba(138,225,241,1) 100%); */
     /* background: rgb(47,232,233);
     background: radial-gradient(circle, rgba(47,232,233,1) 0%, rgba(138,188,241,1) 67%); */
-    background: rgb(47,232,233);
-    background: radial-gradient(circle, rgba(47,232,233,1) 0%, rgba(138,164,241,1) 67%);
-    /* background: rgb(52,49,54);
-    background: radial-gradient(circle, rgba(52,49,54,1) 0%, rgba(0,0,8,1) 100%); */
+    /* background: rgb(47,232,233);
+    background: radial-gradient(circle, rgba(47,232,233,1) 0%, rgba(138,164,241,1) 67%); */
+    background: rgb(52,49,54);
+    background: radial-gradient(circle, rgba(52,49,54,1) 0%, rgba(0,0,8,1) 100%);
 
-    /* max-width: 100%; */
+    
     background-size: contain;
     background-position: center center;
-    /* background-size: cover; */
+    
     min-height: 100vh;
+
+    
 }

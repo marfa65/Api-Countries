@@ -1,9 +1,15 @@
-
+@font-face{
+    font-family: 'Maler';
+    /* src: url(../../fonts/brankovic.ttf); */
+    /* src: url(../fonts/ConcertOne-Regular.ttf); */
+    src: url(../fonts/Hand_Of_Sean_Demo.ttf);
+}
 
 .cont{
-  
     background: rgb(19,94,233);
     background: radial-gradient(circle, rgba(19,94,233,0.962877030162413) 44%, rgba(6,50,226,0.9360119047619048) 100%);
+    /* background: rgb(19,94,233);
+    background: radial-gradient(circle, rgba(19,94,233,0.962877030162413) 44%, rgba(6,50,226,0.9360119047619048) 100%); */
     /* background-color: rgba(19, 94, 233, 0.822); */
     /* background: rgb(87,40,119);
 background: radial-gradient(circle, rgba(87,40,119,1) 0%, rgba(0,0,6,1) 100%, rgba(131,252,69,1) 100%); */
@@ -12,8 +18,7 @@ background: radial-gradient(circle, rgba(87,40,119,1) 0%, rgba(0,0,6,1) 100%, rg
    display: flex;
    justify-content: center;
    align-items: center;
-   margin-top: 10px;
-   
+   margin-top: 10px;   
 }
 
 .cont div{
@@ -22,5 +27,6 @@ background: radial-gradient(circle, rgba(87,40,119,1) 0%, rgba(0,0,6,1) 100%, rg
 }
 select{
     color: rgb(173, 247, 243);
+    /* font-family: cursive; */
     font-family: cursive;
 }

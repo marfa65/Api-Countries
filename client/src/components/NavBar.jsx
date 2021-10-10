@@ -7,13 +7,12 @@ import getCountries from '../actions/getCountries';
 import getByName from '../actions/getByName';
 import paged from '../actions/paged';
 
-
 export default function NavBar(){
     
     const [input, setInput] = useState("");
     const dispatch = useDispatch();
 
-    function handleClick(e){ // para recetear y que cargue todo de nuevo
+    function handleClick(e){ 
         e.preventDefault();
         dispatch(getCountries());
         dispatch(paged(1));
