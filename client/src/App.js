@@ -17,10 +17,6 @@ function App() {
           path="/detail/:id"
           render={({ match }) => <Detail id={match.params.id} />}
         />
-        {/* <Route path="/detail" component={Detail} /> */}
-        {/* <Route path="/create" component={RecipeCreate}/> */}
-        {/* <Route path="*" component={Error404} />{" "} */}
-        {/*ver si funciona teniendo un nav entodas las rutas */}
       </Switch>
     </div>
   );

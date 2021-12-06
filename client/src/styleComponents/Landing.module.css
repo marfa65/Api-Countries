@@ -27,23 +27,19 @@
       margin-bottom: 15px;
       padding-top: 25%;        
       font-family: 'Maler';
-      /* font-family: 'Concert One', cursive; */
+
       font-size: 4em;    
       color: #fff;
   }
   .desc{
     font-family: 'Maler', cursive;
-    /* font-family: 'Maler'; */
+
     font-weight:400;
     font-size: 30px;
     margin-bottom: 40px;
     color: #fff;
   }
-  /* .btn{
-      
-      font-family: 'Maler';   
-      font-size: 25px;
-  } */
+
   .btn {
       width: 220px;
       height: 50px;

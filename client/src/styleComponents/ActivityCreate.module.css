@@ -80,11 +80,8 @@
 }
 .btn:hover {
     color: rgb(12, 1, 1);
-    /* background-color: rgb(19,94,233) */
-    /* background: rgb(131,58,180);
-background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(32,29,253,1) 48%, rgba(252,176,69,1) 100%); */
-background: rgb(131,58,180);
-background: linear-gradient(90deg, rgb(154, 53, 221) 0%, rgba(32,29,253,1) 100%, rgba(252,176,69,1) 100%);
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgb(154, 53, 221) 0%, rgba(32,29,253,1) 100%, rgba(252,176,69,1) 100%);
 } 
 
 .link {

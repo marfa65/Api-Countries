@@ -2,8 +2,7 @@
 
 .cnt{
 
-     margin: 20px;
-     /* margin-top: 10px; */
+    margin: 20px;
     display: grid;
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
