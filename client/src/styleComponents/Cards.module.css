@@ -2,12 +2,12 @@
 
 .cnt{
 
-    margin: 20px;
+    margin: 2rem;
     display: grid;
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
     grid-template-rows: 0.7fr 0.7fr 0.7fr;  
-    gap: 20px 30px; 
+    gap: 2rem 3rem; 
     grid-template-areas: 
       ". . ."
       ". . ."
