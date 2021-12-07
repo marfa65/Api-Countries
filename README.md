@@ -4,30 +4,43 @@
 
 # Individual Project - Henry Countries
 
-<p align="left">
-  <img height="200" src="./countries.png" />
+<p align="center">
+  <img height="200" src="./images/landing.png" />
 </p>
 
 ## Objetivos del Proyecto
 
 - Construir una App utlizando React, Redux, Node y Sequelize.
-- Afirmar y conectar los conceptos aprendidos en la carrera.
-- Aprender mejores prácticas.
-- Aprender y practicar el workflow de GIT.
-- Usar y practicar testing.
+- Esta aplicación realiza consultas a una base de datos propia y tiene información sobre todos los países del mundo, bandera, capital, región, cantidad de población, superficie, entre otros. Esta información fue obtenida mediante una consulta a la API externa https://restcountries.com
 
-## Horarios y Fechas
+También tiene la posibilidad de agregarle actividades turísticas a los mismos con los siguientes datos: nombre de la actividad, duración, dificultad y temporada. Se pueden realizar búsquedas, ordenamientos y filtros, tanto por nombre de país como por actividades turísticas, cantidad de población y continente
 
-El proyecto tendrá una duración máxima de tres semanas. En el caso de que completan todas las tareas antes de dicho lapso podrán avisar a su Instructor para coordinar una fecha de presentación del trabajo (DEMO).
+## Imagenes
+### Vista principal
 
-## Comenzando
+<p align="center">
+  <img height="200" src="./images/countries1.png" />
+</p>
 
- 1. Forkear el repositorio para tener una copia del mismo en sus cuentas
- 2. Clonar el repositorio en sus computadoras para comenzar a trabajar
+### Vista detalle del País
 
-Tendrán un `boilerplate` con la estructura general tanto del servidor como de cliente.
+<p align="center">
+  <img height="200" src="./images/detail.png" />
+</p>
 
-__IMPORTANTE:__ Es necesario contar minimamente con la última versión estable de Node y NPM. Asegurarse de contar con ella para poder instalar correctamente las dependecias necesarias para correr el proyecto.
+### Vista creación actividades turísticas
+
+<p align="center">
+  <img height="200" src="./images/activity.png" />
+</p>
+
+## Duración del proyecto
+
+El proyecto se realizó en tres semanas. 
+
+
+
+<!-- __IMPORTANTE:__ Es necesario contar minimamente con la última versión estable de Node y NPM. Asegurarse de contar con ella para poder instalar correctamente las dependecias necesarias para correr el proyecto.
 
 Actualmente las versiónes necesarias son:
 
@@ -54,11 +67,11 @@ DB_HOST=localhost
 
 Reemplazar `usuariodepostgres` y `passwordDePostgres` con tus propias credenciales para conectarte a postgres. Este archivo va ser ignorado en la subida a github, ya que contiene información sensible (las credenciales).
 
-Adicionalmente será necesario que creen desde psql una base de datos llamada `countries`
+Adicionalmente será necesario que creen desde psql una base de datos llamada `countries` -->
 
-El contenido de `client` fue creado usando: Create React App.
+<!-- El contenido de `client` fue creado usando: Create React App. -->
 
-## Enunciado
+<!-- ## Enunciado
 
 La idea general es crear una aplicación en la cual se pueda ver información de  distintos paises utilizando la api externa [restcountries](https://restcountries.eu/) y a partir de ella poder, entre otras cosas:
 
@@ -78,15 +91,26 @@ __IMPORTANTE__: Para las funcionalidades de filtrado y ordenamiento NO pueden ut
 
 A continuación se detallaran los requerimientos mínimos para la aprobación del proyecto individial. Aquellos que deseen agregar más funcionalidades podrán hacerlo. En cuanto al diseño visual no va a haber wireframes ni prototipos prefijados sino que tendrán libertad de hacerlo a su gusto pero tienen que aplicar los conocimientos de estilos vistos en el curso para que quede agradable a la vista.
 
-__IMPORTANTE__: No se permitirá utilizar librerías externas para aplicar estilos a la aplicación. Tendrán que utilizar CSS con algunas de las opciones que vimos en dicha clase (CSS puro, CSS Modules o Styled Components)
+__IMPORTANTE__: No se permitirá utilizar librerías externas para aplicar estilos a la aplicación. Tendrán que utilizar CSS con algunas de las opciones que vimos en dicha clase (CSS puro, CSS Modules o Styled Components) -->
 
-#### Tecnologías necesarias:
-- [ ] React
-- [ ] Redux
-- [ ] Express
-- [ ] Sequelize - Postgres
+#### Tecnologías utilizadas:
 
 #### Frontend
+- [ ] HTML
+- [ ] CSS
+- [ ] JavaScript
+- [ ] React
+- [ ] Redux
+
+#### Backend
+- [ ] Node.js
+- [ ] Express 
+- [ ] Sequelize 
+- [ ] PostgreSQL
+
+
+#### Autor: Marcelo Fabián González
+<!-- #### Frontend
 
 Se debe desarrollar una aplicación de React/Redux que contenga las siguientes pantallas/rutas.
 
@@ -162,10 +186,10 @@ __IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y pagin
   - Si no existe ningún país mostrar un mensaje adecuado
 - [ ] __POST /activity__:
   - Recibe los datos recolectados desde el formulario controlado de la ruta de creación de actividad turística por body
-  - Crea una actividad turística en la base de datos
+  - Crea una actividad turística en la base de datos -->
 
 
-#### Testing
+<!-- #### Testing
 - [ ] Al menos tener un componente del frontend con sus tests respectivos
 - [ ] Al menos tener una ruta del backend con sus tests respectivos
-- [ ] Al menos tener un modelo de la base de datos con sus tests respectivos
+- [ ] Al menos tener un modelo de la base de datos con sus tests respectivos -->
